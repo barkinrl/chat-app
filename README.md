@@ -110,10 +110,6 @@ realtime-chat-app
 
 - `npm run dev`: Start the React development server.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgments
 
 - [MERN Stack](https://www.mongodb.com/mern-stack)
