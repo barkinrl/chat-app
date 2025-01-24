@@ -82,7 +82,7 @@ Ensure you have the following installed:
      ```
 
 5. **Access the app**:
-   Open your browser and navigate to `http://localhost:3000`.
+   Open your browser and navigate to `http://localhost:5173`.
 
 ## Project Structure
 
