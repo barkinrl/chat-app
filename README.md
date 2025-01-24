@@ -2,6 +2,8 @@
 
 A real-time chat application built using the MERN stack (MongoDB, Express.js, React, Node.js) combined with Socket.io for seamless real-time messaging. The application features user authentication, online status indicators, image sharing, and a responsive, modern UI styled with TailwindCSS and Daisy UI.
 
+working example --> https://fullstack-chat-app-sa2u.onrender.com
+
 ## Features
 
 - **Authentication & Authorization**: Secure user authentication and role-based access control implemented using JWT (JSON Web Tokens).
