@@ -1,12 +1,13 @@
 # Real-time Chat Application
 
-A real-time chat application built using the MERN stack (MongoDB, Express.js, React, Node.js) combined with Socket.io for seamless real-time messaging. The application features user authentication, online status indicators, and a responsive, modern UI styled with TailwindCSS and Daisy UI.
+A real-time chat application built using the MERN stack (MongoDB, Express.js, React, Node.js) combined with Socket.io for seamless real-time messaging. The application features user authentication, online status indicators, image sharing, and a responsive, modern UI styled with TailwindCSS and Daisy UI.
 
 ## Features
 
 - **Authentication & Authorization**: Secure user authentication and role-based access control implemented using JWT (JSON Web Tokens).
 - **Real-time Messaging**: Instant messaging powered by Socket.io for efficient and reliable communication.
 - **Online User Status**: Real-time updates for user presence and availability.
+- **Image Upload & Storage**: Upload and store images using Cloudinary for efficient image management.
 - **Global State Management**: Zustand is used to manage application state effectively.
 - **Error Handling**: Robust error handling on both the server and client sides to ensure a smooth user experience.
 
@@ -26,6 +27,7 @@ A real-time chat application built using the MERN stack (MongoDB, Express.js, Re
 - **Socket.io**: Real-time bidirectional communication.
 - **MongoDB**: NoSQL database for data storage.
 - **JWT**: Secure token-based authentication.
+- **Cloudinary**: Cloud-based service for image upload, storage, and management.
 
 ## Installation
 
@@ -34,81 +36,66 @@ A real-time chat application built using the MERN stack (MongoDB, Express.js, Re
 Ensure you have the following installed:
 
 - Node.js (>= 14.x)
-- MongoDB (cloud instance)
+- MongoDB (local or cloud instance)
 
 ### Steps
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/chat-app.git
+   git clone https://github.com/barkinrl/chat-app
    cd chat-app
    ```
 
 2. **Install dependencies**:
 
-   - For the backend:
-     ```bash
-     cd backend
-     npm install
-     ```
-   - For the frontend:
-     ```bash
-     cd frontend
-     npm install
-     ```
+   ```bash
+   npm run build
+   ```
 
 3. **Set up environment variables**:
 
-   - Backend: Create a `.env` file in the `server` directory and add the following:
+   - Create a `.env` file in the root directory and add the following:
      ```env
      PORT=5001
      MONGO_URI=your_mongodb_connection_string
      JWT_SECRET=your_jwt_secret
+     CLOUDINARY_NAME=your_cloudinary_cloud_name
+     CLOUDINARY_API_KEY=your_cloudinary_api_key
+     CLOUDINARY_API_SECRET=your_cloudinary_api_secret
      ```
-   - Frontend: Create a `.env` file in the `client` directory and add the API base URL if necessary.
 
 4. **Run the application**:
 
-   - Start the backend:
-     ```bash
-     cd backend
-     npm run dev
-     ```
-   - Start the frontend:
-     ```bash
-     cd frontend
-     npm run dev
-     ```
+   ```bash
+   npm run start
+   ```
 
 5. **Access the app**:
-   Open your browser and navigate to `http://localhost:5173`.
+   Open your browser and navigate to `http://localhost:5001`.
 
 ## Project Structure
 
 ```
 realtime-chat-app
-├── frontend(client)          # React frontend
-│   ├── src
-│   └── public
-├── backend(server)          # Node.js backend
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   └── middleware
-└── README.md       # Project documentation
+├── backend          # Node.js backend
+├── frontend         # React frontend
+├── package.json     # Project configuration
+└── README.md        # Project documentation
 ```
 
 ## Scripts
 
-### Backend
+- `npm run build`: Install dependencies for both backend and frontend.
+- `npm run start`: Start the backend and frontend on the same port.
 
-- `npm start`: Start the server.
-- `npm run dev`: Start the server in development mode with live reloading.
+## Contributing
 
-### Frontend
+Contributions are welcome! Please fork this repository and submit a pull request with your changes. For major changes, please open an issue first to discuss what you would like to change.
 
-- `npm run dev`: Start the React development server.
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
@@ -117,7 +104,8 @@ realtime-chat-app
 - [TailwindCSS](https://tailwindcss.com/)
 - [Daisy UI](https://daisyui.com/)
 - [Zustand](https://zustand-demo.pmnd.rs/)
+- [Cloudinary](https://cloudinary.com/)
 
 ---
 
-Stay coding \m/
+Happy coding!
